@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int binary[64] = { 0 };
+	int n = 0, i;
+
+	printf("정수입력 : ");
+	scanf("%d",&n);
+
+	for ( i = 0; i < 32 && n > 0; i++)
+	{
+		binary[i] = n % 2;
+		n = n / 2;
+	}
+	/*
+	for (int j= 0; j <= i; j++)
+	{
+		if (binary[j] == 0) binary[j] = 1;
+		else if (binary[j] == 1) 
+		{
+			binary[j] = 0;
+		}
+	}
+	*/
+	for (i;i > -1; i--)
+	{
+		printf("%d", binary[i]);
+	}
+	
+
+	return 0;
+}
