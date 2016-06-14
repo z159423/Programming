@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int get_divisor(int a);
+
+int main(void)
+{
+	int a;
+	printf("정수를 입력해 주십시요 :");
+	scanf("%d",&a);
+
+	get_divisor(a);
+
+
+	return 0;
+}
+
+int get_divisor(int a)
+{
+	printf("%d의 약수는 : ",a);
+	for (int i = 1; i <= a; i++)
+	{
+		if (a % i == 0)
+		{
+			printf("%2d",i);
+		}
+	}
+	printf("\n");
+}
